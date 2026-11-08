@@ -15,9 +15,17 @@
   Let's check that the first row of Z equals $\mathbf{x}^{\!\top}_1W+\mathbf{b}^{\!\top}$:
   \[
     \begin{gathered}
-      \mathbf{x}^{\!\top}_1=\begin{pmatrix}1\\0\\2\end{pmatrix}\\
-      \mathbf{x}^{\!\top}_1W=\begin{pmatrix}3\\\end{pmatrix}
+      \mathbf{x}^{\!\top}_1=\begin{pmatrix}1&0&2\end{pmatrix}\\
+      W = \begin{pmatrix}1&-1\\0&2\\1&1\end{pmatrix}\\
+      \mathbf{x}^{\!\top}_1W=\begin{pmatrix}3&1\end{pmatrix}
+      \mathbf{b}^{\!\top} = \begin{pmatrix}0.5&-0.5\end{pmatrix}
+      \mathbf{x}^{\!\top}_1W+\mathbf{b}^{\!\top}=\begin{pmatrix}3.5&0.5\end{pmatrix}
     \end{gathered}
-    
   \]
+  We can see that it is equal to the first row of Z
+  (b)
+  The shape of Z and R are both $R^{m\times2}$, and $\mathbf{1}_4 \mathbf{b}^{\!\top}$ has the same shape.
+  (c)
+  The number of parameters for this layer is $n\cdot 2+1\cdot 2 = 8$. If $n=784$ and $p=128$, the number of parameters would be $n\cdot p + p = 784\cdot 128 + 128 =$ 
 \end{solution}
+
