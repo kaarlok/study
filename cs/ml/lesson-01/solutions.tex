@@ -22,10 +22,12 @@
       \mathbf{x}^{\!\top}_1W+\mathbf{b}^{\!\top}=\begin{pmatrix}3.5&0.5\end{pmatrix}
     \end{gathered}
   \]
-  We can see that it is equal to the first row of Z
+  We can see that it is equal to the first row of Z.\\
   (b)
-  The shape of Z and R are both $R^{m\times2}$, and $\mathbf{1}_4 \mathbf{b}^{\!\top}$ has the same shape.
+  The shape of Z and R are both $R^{m\times2}$, and $\mathbf{1}_4 \mathbf{b}^{\!\top}$ has the same shape.\\
   (c)
-  The number of parameters for this layer is $n\cdot 2+1\cdot 2 = 8$. If $n=784$ and $p=128$, the number of parameters would be $n\cdot p + p = 784\cdot 128 + 128 =$ 
+  The number of parameters for this layer is $n\cdot 2+1\cdot 2 = 8$. If $n=784$ and $p=128$, the number of parameters would be $n\cdot p + p = 784\cdot 128 + 128 = 100480$ \\
+  (d)
+  $R$ has only one entry which is zero, namely the bottom right entry. The map $X \mapsto R$ is not linear in X because of the non-linear activation function. The easiest example of $X$ and $a$ for which $\operatorname{relu}(aX) \ne a\operatorname{relu}(X)$ is $X=\begin{pmatrix}1\end{pmatrix}$ and $a=-1$. The inequality is trivial. The negative entry in $Z$ becomes the zero entry in $R$.
 \end{solution}
 
